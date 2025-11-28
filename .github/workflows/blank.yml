@@ -1,0 +1,27 @@
+name: Wake HuggingFace Spaces
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # every 15 minutes
+  workflow_dispatch:          # allow manual run from Actions tab
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping Rag_chatbot
+        run: |
+          curl -sL "https://rohit-mewada-1125-rag-chatbot.hf.space/" > /dev/null || true
+
+      - name: Ping Passport_photo_designer
+        run: |
+          curl -sL "https://rohit-mewada-1125-passport-photo-designer.hf.space/" > /dev/null || true
+
+      - name: Ping OLLAMA_RUN
+        run: |
+          curl -sL "https://rohit-mewada-1125-ollama-run.hf.space/" > /dev/null || true
+
+      - name: Ping sympcare_models
+        run: |
+          curl -sL "https://rohit-mewada-1125-sympcare-models.hf.space/" > /dev/null || true
