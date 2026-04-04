@@ -10,11 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Ping Rag_chatbot
-        run: |
-          curl -sL "https://rohit-mewada-1125-rag-chatbot.hf.space/" > /dev/null || true
-
-
+     
       - name: Ping sympcare_models
         run: |
           curl -sL "https://rohit-mewada-1125-sympcare-models.hf.space/" > /dev/null || true
